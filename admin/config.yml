@@ -19,12 +19,12 @@ collections:
         file: "hakkimizda.html"
         fields:
           - {label: "Sayfanın Tüm Kodu", name: "body", widget: "markdown"}
-      - label: "Hizmetlerimiz (Liste)"
+      - label: "Hizmetlerimiz (Liste Sayfası)"
         name: "hizmetlerimiz"
         file: "hizmetlerimiz.html"
         fields:
           - {label: "Sayfanın Tüm Kodu", name: "body", widget: "markdown"}
-      - label: "Bloglar (Liste)"
+      - label: "Bloglar (Liste Sayfası)"
         name: "bloglar"
         file: "bloglar.html"
         fields:
