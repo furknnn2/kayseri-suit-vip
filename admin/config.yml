@@ -6,51 +6,89 @@ media_folder: "yonetim/upload"
 public_folder: "/yonetim/upload"
 
 collections:
-  - name: "ayarlar"
-    label: "Genel Site Ayarları"
+  - name: "ana_sayfalar"
+    label: "Ana Sayfalar"
     files:
-      - label: "İletişim, Sosyal Medya ve Logo"
-        name: "genel_ayarlar"
-        file: "_data/ayarlar.yml"
+      - label: "Anasayfa (index.html)"
+        name: "index"
+        file: "index.html"
         fields:
-          - {label: "Site Logosu", name: "logo", widget: "image"}
-          - {label: "Telefon Numarası", name: "telefon", widget: "string"}
-          - {label: "E-posta Adresi", name: "eposta", widget: "string"}
-          - {label: "Çalışma Saatleri", name: "saatler", widget: "string"}
-          - {label: "Adres", name: "adres", widget: "string"}
-          - {label: "Instagram Linki", name: "instagram_url", widget: "string"}
-          - {label: "Facebook Linki", name: "facebook_url", widget: "string"}
+          - {label: "Sayfanın Tüm Kodu", name: "body", widget: "markdown"}
+      - label: "Hakkımızda"
+        name: "hakkimizda"
+        file: "hakkimizda.html"
+        fields:
+          - {label: "Sayfanın Tüm Kodu", name: "body", widget: "markdown"}
+      - label: "Hizmetlerimiz (Liste)"
+        name: "hizmetlerimiz"
+        file: "hizmetlerimiz.html"
+        fields:
+          - {label: "Sayfanın Tüm Kodu", name: "body", widget: "markdown"}
+      - label: "Bloglar (Liste)"
+        name: "bloglar"
+        file: "bloglar.html"
+        fields:
+          - {label: "Sayfanın Tüm Kodu", name: "body", widget: "markdown"}
+      - label: "İletişim"
+        name: "iletisim"
+        file: "iletisim.html"
+        fields:
+          - {label: "Sayfanın Tüm Kodu", name: "body", widget: "markdown"}
+      - label: "Gizlilik Sözleşmesi"
+        name: "gizlilik-sozlesmesi"
+        file: "gizlilik-sozlesmesi.html"
+        fields:
+          - {label: "Sayfanın Tüm Kodu", name: "body", widget: "markdown"}
+      - label: "404 Hata Sayfası"
+        name: "404"
+        file: "404.html"
+        fields:
+          - {label: "Sayfanın Tüm Kodu", name: "body", widget: "markdown"}
 
-  - name: "sayfalar"
-    label: "Sabit Sayfalar"
+  - name: "hizmet_detaylari"
+    label: "Hizmet Detay Sayfaları"
     files:
-      - {file: "index.html", label: "Anasayfa", name: "index", fields: [{label: "SEO Başlığı", name: "title", widget: "string"}, {label: "SEO Açıklaması", name: "description", widget: "text"}, {label: "Sayfa Ana İçeriği", name: "body", widget: "markdown"}]}
-      - {file: "hakkimizda.html", label: "Hakkımızda", name: "hakkimizda", fields: [{label: "SEO Başlığı", name: "title", widget: "string"}, {label: "SEO Açıklaması", name: "description", widget: "text"}, {label: "Sayfa Ana İçeriği", name: "body", widget: "markdown"}]}
-      - {file: "hizmetlerimiz.html", label: "Hizmetlerimiz (Liste Sayfası)", name: "hizmetlerimiz", fields: [{label: "SEO Başlığı", name: "title", widget: "string"}, {label: "SEO Açıklaması", name: "description", widget: "text"}]}
-      - {file: "bloglar.html", label: "Blog (Liste Sayfası)", name: "bloglar", fields: [{label: "SEO Başlığı", name: "title", widget: "string"}, {label: "SEO Açıklaması", name: "description", widget: "text"}]}
-      - {file: "iletisim.html", label: "İletişim", name: "iletisim", fields: [{label: "SEO Başlığı", name: "title", widget: "string"}, {label: "SEO Açıklaması", name: "description", widget: "text"}, {label: "Sayfa Ana İçeriği", name: "body", widget: "markdown"}]}
-      - {file: "gizlilik-sozlesmesi.html", label: "Gizlilik Sözleşmesi", name: "gizlilik-sozlesmesi", fields: [{label: "SEO Başlığı", name: "title", widget: "string"}, {label: "SEO Açıklaması", name: "description", widget: "text"}, {label: "Sayfa Ana İçeriği", name: "body", widget: "markdown"}]}
-      - {file: "404.html", label: "404 Hata Sayfası", name: "404", fields: [{label: "SEO Başlığı", name: "title", widget: "string"}, {label: "Sayfa Ana İçeriği", name: "body", widget: "markdown"}]}
+      - label: "Lazer Epilasyon"
+        name: "lazer-epilasyon"
+        file: "hizmet/lazer-epilasyon/index.html"
+        fields:
+          - {label: "Sayfanın Tüm Kodu", name: "body", widget: "markdown"}
+      - label: "Cilt Bakımı"
+        name: "cilt-bakimi"
+        file: "hizmet/cilt-bakimi/index.html"
+        fields:
+          - {label: "Sayfanın Tüm Kodu", name: "body", widget: "markdown"}
+      - label: "Bölgesel İncelme"
+        name: "bolgesel-incelme"
+        file: "hizmet/bolgesel-incelme/index.html"
+        fields:
+          - {label: "Sayfanın Tüm Kodu", name: "body", widget: "markdown"}
+      - label: "Saç Çoğaltma"
+        name: "sac-cogaltma"
+        file: "hizmet/sac-cogaltma/index.html"
+        fields:
+          - {label: "Sayfanın Tüm Kodu", name: "body", widget: "markdown"}
+      - label: "Leke Protokolleri"
+        name: "leke-protokolleri"
+        file: "hizmet/leke-protokolleri/index.html"
+        fields:
+          - {label: "Sayfanın Tüm Kodu", name: "body", widget: "markdown"}
 
-  - name: "hizmetler"
-    label: "Hizmetler"
-    folder: "hizmet/"
-    create: true
-    slug: "{{slug}}/index"
-    extension: "html"
-    fields:
-      - {label: "Hizmet Adı", name: "title", widget: "string"}
-      - {label: "Öne Çıkan Görsel", name: "thumbnail", widget: "image"}
-      - {label: "Sayfa İçeriği", name: "body", widget: "markdown"}
-
-  - name: "blog"
-    label: "Blog Yazıları"
-    folder: "detay/"
-    create: true
-    slug: "{{slug}}/index"
-    extension: "html"
-    fields:
-      - {label: "Başlık", name: "title", widget: "string"}
-      - {label: "Yayın Tarihi", name: "date", widget: "datetime"}
-      - {label: "Öne Çıkan Görsel", name: "thumbnail", widget: "image"}
-      - {label: "Yazı İçeriği", name: "body", widget: "markdown"}
+  - name: "blog_detaylari"
+    label: "Blog Detay Sayfaları"
+    files:
+      - label: "2025 Güzellik Trendleri"
+        name: "guzellik-trendleri"
+        file: "detay/2025-guzellik-ve-bakim-trendleri/index.html"
+        fields:
+          - {label: "Sayfanın Tüm Kodu", name: "body", widget: "markdown"}
+      - label: "Kayseri Cilt Bakımı"
+        name: "kayseri-cilt-bakimi"
+        file: "detay/kayseri-de-en-cok-tercih-edilen-cilt-bakimi-uygulamalari/index.html"
+        fields:
+          - {label: "Sayfanın Tüm Kodu", name: "body", widget: "markdown"}
+      - label: "Bölgesel İncelme Nedir"
+        name: "bolgesel-incelme-nedir"
+        file: "detay/bolgesel-incelme-nedir-nasil-yapilir/index.html"
+        fields:
+          - {label: "Sayfanın Tüm Kodu", name: "body", widget: "markdown"}
