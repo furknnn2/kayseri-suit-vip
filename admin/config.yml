@@ -6,35 +6,51 @@ media_folder: "yonetim/upload"
 public_folder: "/yonetim/upload"
 
 collections:
-  - name: "sayfalar"
-    label: "Sayfalar"
+  - name: "ayarlar"
+    label: "Genel Site Ayarları"
     files:
-      - label: "Anasayfa"
-        name: "index"
-        file: "index.html"
+      - label: "İletişim, Sosyal Medya ve Logo"
+        name: "genel_ayarlar"
+        file: "_data/ayarlar.yml"
         fields:
-          - {label: "Sayfa Ana İçeriği", name: "body", widget: "markdown"}
+          - {label: "Site Logosu", name: "logo", widget: "image"}
+          - {label: "Telefon Numarası", name: "telefon", widget: "string"}
+          - {label: "E-posta Adresi", name: "eposta", widget: "string"}
+          - {label: "Çalışma Saatleri", name: "saatler", widget: "string"}
+          - {label: "Adres", name: "adres", widget: "string"}
+          - {label: "Instagram Linki", name: "instagram_url", widget: "string"}
+          - {label: "Facebook Linki", name: "facebook_url", widget: "string"}
 
-      - label: "Hakkımızda Sayfası"
-        name: "hakkimizda"
-        file: "hakkimizda.html"
-        fields:
-          - {label: "Sayfa Ana İçeriği", name: "body", widget: "markdown"}
+  - name: "sayfalar"
+    label: "Sabit Sayfalar"
+    files:
+      - {file: "index.html", label: "Anasayfa", name: "index", fields: [{label: "SEO Başlığı", name: "title", widget: "string"}, {label: "SEO Açıklaması", name: "description", widget: "text"}, {label: "Sayfa Ana İçeriği", name: "body", widget: "markdown"}]}
+      - {file: "hakkimizda.html", label: "Hakkımızda", name: "hakkimizda", fields: [{label: "SEO Başlığı", name: "title", widget: "string"}, {label: "SEO Açıklaması", name: "description", widget: "text"}, {label: "Sayfa Ana İçeriği", name: "body", widget: "markdown"}]}
+      - {file: "hizmetlerimiz.html", label: "Hizmetlerimiz (Liste Sayfası)", name: "hizmetlerimiz", fields: [{label: "SEO Başlığı", name: "title", widget: "string"}, {label: "SEO Açıklaması", name: "description", widget: "text"}]}
+      - {file: "bloglar.html", label: "Blog (Liste Sayfası)", name: "bloglar", fields: [{label: "SEO Başlığı", name: "title", widget: "string"}, {label: "SEO Açıklaması", name: "description", widget: "text"}]}
+      - {file: "iletisim.html", label: "İletişim", name: "iletisim", fields: [{label: "SEO Başlığı", name: "title", widget: "string"}, {label: "SEO Açıklaması", name: "description", widget: "text"}, {label: "Sayfa Ana İçeriği", name: "body", widget: "markdown"}]}
+      - {file: "gizlilik-sozlesmesi.html", label: "Gizlilik Sözleşmesi", name: "gizlilik-sozlesmesi", fields: [{label: "SEO Başlığı", name: "title", widget: "string"}, {label: "SEO Açıklaması", name: "description", widget: "text"}, {label: "Sayfa Ana İçeriği", name: "body", widget: "markdown"}]}
+      - {file: "404.html", label: "404 Hata Sayfası", name: "404", fields: [{label: "SEO Başlığı", name: "title", widget: "string"}, {label: "Sayfa Ana İçeriği", name: "body", widget: "markdown"}]}
 
-      - label: "Hizmetlerimiz Sayfası"
-        name: "hizmetlerimiz"
-        file: "hizmetlerimiz.html"
-        fields:
-          - {label: "Sayfa Ana İçeriği", name: "body", widget: "markdown"}
+  - name: "hizmetler"
+    label: "Hizmetler"
+    folder: "hizmet/"
+    create: true
+    slug: "{{slug}}/index"
+    extension: "html"
+    fields:
+      - {label: "Hizmet Adı", name: "title", widget: "string"}
+      - {label: "Öne Çıkan Görsel", name: "thumbnail", widget: "image"}
+      - {label: "Sayfa İçeriği", name: "body", widget: "markdown"}
 
-      - label: "Bloglar Sayfası"
-        name: "bloglar"
-        file: "bloglar.html"
-        fields:
-          - {label: "Sayfa Ana İçeriği", name: "body", widget: "markdown"}
-
-      - label: "İletişim Sayfası"
-        name: "iletisim"
-        file: "iletisim.html"
-        fields:
-          - {label: "Sayfa Ana İçeriği", name: "body", widget: "markdown"}
+  - name: "blog"
+    label: "Blog Yazıları"
+    folder: "detay/"
+    create: true
+    slug: "{{slug}}/index"
+    extension: "html"
+    fields:
+      - {label: "Başlık", name: "title", widget: "string"}
+      - {label: "Yayın Tarihi", name: "date", widget: "datetime"}
+      - {label: "Öne Çıkan Görsel", name: "thumbnail", widget: "image"}
+      - {label: "Yazı İçeriği", name: "body", widget: "markdown"}
