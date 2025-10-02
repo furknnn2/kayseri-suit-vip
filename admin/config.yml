@@ -1,0 +1,40 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "yonetim/upload"
+public_folder: "/yonetim/upload"
+
+collections:
+  - name: "sayfalar"
+    label: "Sayfalar"
+    files:
+      - label: "Anasayfa"
+        name: "index"
+        file: "index.html"
+        fields:
+          - {label: "Sayfa Ana İçeriği", name: "body", widget: "markdown"}
+
+      - label: "Hakkımızda Sayfası"
+        name: "hakkimizda"
+        file: "hakkimizda.html"
+        fields:
+          - {label: "Sayfa Ana İçeriği", name: "body", widget: "markdown"}
+
+      - label: "Hizmetlerimiz Sayfası"
+        name: "hizmetlerimiz"
+        file: "hizmetlerimiz.html"
+        fields:
+          - {label: "Sayfa Ana İçeriği", name: "body", widget: "markdown"}
+
+      - label: "Bloglar Sayfası"
+        name: "bloglar"
+        file: "bloglar.html"
+        fields:
+          - {label: "Sayfa Ana İçeriği", name: "body", widget: "markdown"}
+
+      - label: "İletişim Sayfası"
+        name: "iletisim"
+        file: "iletisim.html"
+        fields:
+          - {label: "Sayfa Ana İçeriği", name: "body", widget: "markdown"}
